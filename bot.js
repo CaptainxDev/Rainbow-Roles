@@ -108,4 +108,4 @@ message.author.sendEmbed(rainembed)//send the embed to the author dm
 		   message.author.send({embed})//send the url in the author dm
 	   }
    });
-client.login(process.env.t)
+client.login(process.env.to)
