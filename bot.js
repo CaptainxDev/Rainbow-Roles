@@ -80,4 +80,4 @@ if(command === `channel`) {
 	
 });
 
-client.login(config.token)
+client.login(token)
