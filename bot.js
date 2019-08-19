@@ -3,6 +3,28 @@ const bot = new Discord.Client()
 const settings = require("./your_settings.json")
 const talkedRecently = new Set();
 
+client.on("ready", () => {
+
+  console.log(`Logged in as ${client.user.username}!`);
+
+  client.user.setActivity('GhostRider R2 type ?help', {type: "playing"})
+
+console.log(`${client.user.tag} running on ${client.guilds.size} guilds with ${client.users.size} users.`);
+
+
+});
+
+ 
+client.on("message", async (message) => {
+	
+	let prefix = "!";
+	
+	if(!message.content.startsWith(prefix) || message.author.bot) return;
+	
+    const input = message.content.slice(prefix.length).split(' ');
+
+    const cmd = input.shift();
+
 
 if(command === `channel`) {
  
