@@ -45,7 +45,7 @@ if(!message.channel.guild) return;
     if(role) return message.channel.send(`This Setup is Already Completed !`)//if the role already created return with this msg
   //start of create role 
   if(!role){
-   Rainbow Fade =  message.guild.createRole({
+   rainbow = message.guild.createRole({
    name: "Rainbow Fade",//the role will create name
    color: "#000000",//the default color
    permissions:[]//the permissions
