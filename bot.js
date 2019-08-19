@@ -78,6 +78,5 @@ if(command === `channel`) {
         }, 60000);
 }
 
-});
 
 client.login(config.token);
