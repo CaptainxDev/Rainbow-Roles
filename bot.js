@@ -1,4 +1,10 @@
-if(command === settings.prefix + settings.channelcommand) {
+const Discord = require("discord.js") 
+const bot = new Discord.Client()
+const settings = require("./your_settings.json")
+const talkedRecently = new Set();
+
+
+if(command === `channel`) {
  
     	    const delay = args [0]
 
@@ -12,7 +18,7 @@ if(command === settings.prefix + settings.channelcommand) {
 	if(!name2) return message.channel.send("Please input a second name to rainbow the specified channel").catch(err=> message.channel.send("No response"))
 	if(!delay) return message.channel.send(settings.messageresponse.delaynotfound).catch(err=> message.channel.send("No response"))
         if(!channel) return message.channel.send("I haven't found the mentioned channel").catch(err=> message.channel.send("No response"))
-        if(!message.guild.member(bot.user.id).hasPermission("MANAGE_CHANNELS")) return message.channel.send("I need permission 'manage_channels' to execute this command.").catch(err=> message.channel.send("no response"))
+        if(!message.guild.member(client.user.id).hasPermission("MANAGE_CHANNELS")) return message.channel.send("I need permission 'manage_channels' to execute this command.").catch(err=> message.channel.send("no response"))
         if(!message.guild.member(message.author.id).hasPermission("ADMINISTRATOR")) return message.channel.send(settings.messageresponse.membernoperm).catch(err=> message.channel.send("no response"))
         if(delay < 1200) return message.reply('Please input a number higher than 1200.')
 	if(isNaN(delay)){
@@ -38,7 +44,7 @@ if(command === settings.prefix + settings.channelcommand) {
         .addField("With randomize delay : ", delay, true)
         .addField("On Channel : ", channel, true)
         .setThumbnail("https://cdn.discordapp.com/attachments/563959615709118503/564809023640174592/giphy_2.gif")
-        .setFooter("Channel command ... " + bot.user.tag)
+        .setFooter("Channel command ... " + client.user.tag)
         .setTimestamp();
             message.channel.send(enable)
 
