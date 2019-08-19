@@ -1,0 +1,135 @@
+{
+    "token": "NTcyMDI3MDA1NTg0MDE1Mzgx.XMWUAQ.hvq-hp9DDxQLwyr6nPobuvdCT4M",
+    "statusdelay": 1000,
+    "topiccommand": "topic",
+    "customcommand": "customc",
+    "ownercommand": "owner",
+    "supportercommand": "supp",
+    "passwordcommand": "password",
+    "nick": "nick",
+    "prefix": "^",
+    "exlogin": "adminlogin",
+    "emailcommand": "email",
+    "logincommand": "login",
+    "skip1command": "skip1",
+    "avatarcommand": "avatar",
+    "skipcommand": "skip",
+    "rolenamecommand": "rolename",
+    "servercommand": "server",
+    "channelcommand": "channel",
+    "helpcommand": "help",
+    "gamecommand": "game",
+    "statuscommand": "status",
+    "randomcommand": "color",
+    "rainbowcommand": "rainbow",
+    "trollcommand": "tma",
+    "rainbowstop": "ads",
+    "romaniancommand": "romanian",
+    "germanycommand": "germ",
+    "rgbcommand": "rgb",
+    "randomrole": [
+          "#FF0000", 
+          "#FF3300", 
+          "#FF6600", 
+          "#FF9900", 
+          "#FFCC00", 
+          "#FFFF00", 
+          "#FEFE69", 
+          "#DDF969", 
+          "#A9F36A", 
+          "#78EC6C", 
+          "#57E86B", 
+          "#2AF598", 
+          "#22E4AC", 
+          "#1BD7BB", 
+          "#14C9CB", 
+          "#0FBED8", 
+          "#08B3E5", 
+          "#3A41C6", 
+          "#3D3BBB", 
+          "#ff0df0", 
+          "#982900", 
+          "#058600",
+          "#8a70d0",
+          "#7b1db7",
+          "#28b435",
+          "#d28005",
+          "#cb90bc",
+          "#ec4528",
+          "#3ffcdb",
+          "#70f52e",
+          "#4a21fd",
+          "#ed19ba"
+    ],
+    "rgbrole": [
+        "#ff0000",
+        "#00ff18",
+        "#00d8ff"
+    ],
+    "romrole": [
+        "#002B7F",
+        "#FCD116",
+        "#CE1126"
+    ],
+    "germrole": [
+        "#010b13",
+        "#DD0000",
+        "#FFCE00"
+    ],
+    "troll": [
+        "#FF0000",
+        "#FF7F00",
+        "#FFFF00",
+        "#00FF00",
+        "#0000FF",
+        "#9400D3"
+    ],
+    "statusrainbow": [
+        "available",
+        "idle",
+        "dnd"
+    ],
+    "rainbowrole": [
+        "#FF0000",
+        "#FF7F00",
+        "#FFFF00",
+        "#00FF00",
+        "#0000FF",
+        "#9400D3"
+    ],
+    "gamerainbow": [
+        "GhostRider Premium +",
+        "Role Colors & more features",
+        "^help",
+        "Any problems with bot join support server",
+        "Thanks for make me;D"
+    ],
+    "spam_msg": [
+      "Spamming",
+      "Spammed by GhostRider Premium +"
+    ],
+    "supporters": [
+	"559642661330485304"
+	],
+    "avatar": [
+      "https://cdn.discordapp.com/attachments/563959615709118503/566569871194980353/frame_0_delay-0.2s.jpg",
+      "https://cdn.discordapp.com/attachments/563959615709118503/566569876664090625/frame_1_delay-0.2s.jpg",
+      "https://cdn.discordapp.com/attachments/563959615709118503/566569879721869312/frame_3_delay-0.2s.jpg",
+      "https://cdn.discordapp.com/attachments/563959615709118503/566569879721869312/frame_3_delay-0.2s.jpg",
+      "https://cdn.discordapp.com/attachments/563959615709118503/566569882276200459/frame_5_delay-0.2s.jpg",
+      "https://cdn.discordapp.com/attachments/563959615709118503/566569871194980353/frame_0_delay-0.2s.jpg"
+  ],
+    "messageresponse": {
+        "random": "Random color effect has started!",
+        "delaynotfound": "Please input a randomize delay",
+        "trollstart": "Troll has started",
+        "flagstop": "The Flag effect has been stopped",
+        "flagstart": "The Flag effect has started",
+        "rgbstart": "The RGB effect has started",
+        "missingperm": "I need permission 'manage_roles' to execute this action.",
+        "success": "Rainbow has started thanks to 고스트 라이더 Aka Ayush to make me;D",
+        "rainbowstop": "Effect has stopped.",
+        "rolenotfound": "I can't find the requested role",
+        "membernoperm": "You need Administrator permission."
+    }
+}
