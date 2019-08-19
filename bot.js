@@ -95,7 +95,7 @@ If you have a question or an issue with my bot
 message.author.sendEmbed(rainembed)//send the embed to the author dm
     }})
    client.on('message', message => {//new cmd
-	   if(message.content.startsWith(`+invite`)) { //the invite bot cmd
+	   if(message.content.startsWith(`#invite`)) { //the invite bot cmd
 		   if(!message.channel.guild) return;
            message.reply('Sent you a DM! 📫')
 		   var embed = new Discord.RichEmbed()
