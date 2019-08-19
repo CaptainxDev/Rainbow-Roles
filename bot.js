@@ -80,4 +80,4 @@ if(command === `channel`) {
 
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(config.token);
