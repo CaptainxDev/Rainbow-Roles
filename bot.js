@@ -30,7 +30,6 @@ if(command === `channel`) {
  
     	    const delay = args [0]
 
-        if(supporters.includes(message.author.id)) {
             const name1 = args [1]
 	    const name2 = args [2]
 	    const names = name1 + " " + name2
@@ -78,5 +77,7 @@ if(command === `channel`) {
         }, 60000);
 }
 
+	
+});
 
-client.login(config.token);
+client.login(config.token)
