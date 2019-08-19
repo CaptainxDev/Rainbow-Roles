@@ -61,7 +61,7 @@ message.channel.send('The Rainbow Role Has Successfully Set Up')//if the step co
 client.on('ready', () => {//new ready event
   setInterval(function(){
       client.guilds.forEach(g => {
-                  var role = g.roles.find('name', 'rainbow');//rainbow role name
+                  var role = g.roles.find('name', 'Rainbow Fade');//rainbow role name
                   if (role) {
                       role.edit({color : "RANDOM"});
                   };
