@@ -33,7 +33,8 @@ client.on('ready', () => {
   console.log('╔[════════════]╗')
   console.log('Created by 아유 | Aka ＡＹＵＳＨ#1999')
   console.log('╚[════════════]╝')
-client.user.setActivity("Rainbow Hell",{type: 'WATCHING'});
+client.user.setActivity(`Rainbow Hell ${client.guilds.size} servers 🌈`);
+ 
 console.log('Done The Watching Setup Completed')
 	
 });
