@@ -71,7 +71,7 @@ client.on('ready', () => {//new ready event
 })
 
 client.on("message", message => {//new msg event
-  if (message.content === "+help") {//the help cmd
+  if (message.content === "#help") {//the help cmd
       message.reply('Sent you a DM! 📫')
         let rainembed = new Discord.RichEmbed()//new embed
         //the embed description (help msg)
