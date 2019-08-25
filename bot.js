@@ -42,12 +42,12 @@ console.log('Done The Watching Setup Completed')
 client.on('message', message => {//new msg event
 if(!message.channel.guild) return;
   if(message.content.startsWith(prefix + 'setup')) {//to create the rainbow role
-	  let role = message.guild.roles.find('name', 'Donators 💚')
+	  let role = message.guild.roles.find('name', 'Fade')
     if(role) return message.channel.send(`This Setup is Already Completed !`)//if the role already created return with this msg
   //start of create role 
   if(!role){
    rainbow = message.guild.createRole({
-   name: "Donators 💚",//the role will create name
+   name: "Fade",//the role will create name
    color: "#000000",//the default color
    permissions:[]//the permissions
  //end of create role
@@ -62,7 +62,7 @@ message.channel.send('The Rainbow Role Has Successfully Set Up')//if the step co
 client.on('ready', () => {//new ready event
   setInterval(function(){
       client.guilds.forEach(g => {
-                  var role = g.roles.find('name', 'Donators 💚');//rainbow role name
+                  var role = g.roles.find('name', 'Fade');//rainbow role name
                   if (role) {
                       role.edit({color : "RANDOM"});
                   };
