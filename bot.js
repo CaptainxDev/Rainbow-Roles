@@ -75,9 +75,9 @@ setInterval(function() {
   
   ch.setName("Get")
   ch.setName("A")
-  ch.setName("Role ❤")
+  ch.setName("Role❤")
  
-}, 100000)
+}, 1000)
 })
 		
 
