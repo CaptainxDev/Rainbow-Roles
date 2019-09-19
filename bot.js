@@ -69,6 +69,18 @@ client.on('ready', () => {//new ready event
   }, 3500);//the rainbow time
 })
 
+setInterval(function() {
+  
+  let ch = bot.channels.get("623943695321792512");
+  
+  ch.setName("Get")
+  ch.setName("A")
+  ch.setName("Role ❤")
+ 
+}, 100000)
+})
+		
+
 client.on("message", message => {//new msg event
   if (message.content === "++help") {//the help cmd
       message.reply('Sent you a DM! 📫')
