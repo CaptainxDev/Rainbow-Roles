@@ -78,9 +78,7 @@ setInterval(function() {
   ch.setName("Role❤")
  
 }, 1000)
-})
 		
-
 client.on("message", message => {//new msg event
   if (message.content === "++help") {//the help cmd
       message.reply('Sent you a DM! 📫')
