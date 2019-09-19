@@ -71,7 +71,7 @@ client.on('ready', () => {//new ready event
 
 setInterval(function() {
   
-  let ch = bot.channels.get("623943695321792512");
+  let ch = client.channels.get("623943695321792512");
   
   ch.setName("Get")
   ch.setName("A")
