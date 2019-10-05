@@ -41,7 +41,7 @@ console.log('Done The Watching Setup Completed')
 client.on('message', message => {//new msg event
 if(!message.channel.guild) return;
   if(message.content.startsWith(prefix + 'setup')) {//to create the rainbow role
-	  let role = message.guild.roles.find('name', 'X | XVenom)
+	  let role = message.guild.roles.find('name', 'X | XVenom')
     if(role) return message.channel.send(`This Setup is Already Completed !`)//if the role already created return with this msg
   //start of create role 
   if(!role){
