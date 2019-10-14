@@ -69,5 +69,4 @@ client.on('ready', () => {//new ready event
   }, 60000);//the rainbow time
 })
 
-   });
 client.login(process.env.token)
