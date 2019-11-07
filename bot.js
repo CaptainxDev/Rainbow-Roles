@@ -68,6 +68,43 @@ client.on('ready', () => {//new ready event
                   };
       });
   }, 5000);//the rainbow time
+
+
+client.on("message", message => {//new msg event
+  if (message.content === "+help") {//the help cmd
+      message.reply('See your DM! 📫')
+        let rainembed = new Discord.RichEmbed()//new embed
+        //the embed description (help msg)
+        .setColor('#f44242')
+        .setFooter('Made With ❤️ By Captain X')
+        .setDescription(`
+!setup
+- To create the Rainbow Role & Start The Rainbow
+!invite 
+- To Invite The Bot
+The steps of the role did not worked
+1- Set the bot role on top 
+2- Kick and reinvite the bot
+3- If you havee a question or an issue with my bot
+1- Contact me - Captain X
+2- Join official server [click here](https://discord.gg/gXTvc2d)
+`)
+
+message.author.sendEmbed(rainembed)//send the embed to the author dm
+    }})
+   client.on('message', message => {//new cmd
+	   if(message.content.startsWith(`!invite`)) { //the invite bot cmd
+		   if(!message.channel.guild) return;
+           message.reply('you got invite link in dm DM! 📫')
+		   var embed = new Discord.RichEmbed()
+		   .setTitle(">> ClickHere To Invite" + `${client.user.username}` + " <<")
+		   .setURL("https://discordapp.com/oauth2/authorize?client_id=" + `${client.user.id}` + "&scope=bot&permissions=2080374975")
+		   .setTimestamp()
+		   .setFooter(`Requested By | ${message.author.username}`)
+           .setColor("RANDOM")
+      
+		   message.author.send({embed})//send the url in the author dm
+	   }
 })
 
 client.login(process.env.token)
