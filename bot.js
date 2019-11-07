@@ -69,6 +69,8 @@ client.on('ready', () => {//new ready event
       });
   }, 5000);//the rainbow time
 
+})
+
 
 client.on("message", message => {//new msg event
   if (message.content === "+help") {//the help cmd
@@ -105,6 +107,6 @@ message.author.sendEmbed(rainembed)//send the embed to the author dm
       
 		   message.author.send({embed})//send the url in the author dm
 	   }
-})
+});
 
 client.login(process.env.token)
