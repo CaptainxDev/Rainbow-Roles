@@ -89,7 +89,7 @@ The steps of the role did not worked
 2- Kick and reinvite the bot
 3- If you havee a question or an issue with my bot
 1- Contact me - Captain X
-2- Join official server [click here](https://discord.gg/gXTvc2d)
+2- Join official server [click here](https://discord.gg/EY8XARS)
 `)
 
 message.author.sendEmbed(rainembed)//send the embed to the author dm
