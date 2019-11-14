@@ -23,7 +23,7 @@ const client = new Discord.Client();
 
 client.once("ready", () => {
   console.log("Ready!");
-  client.user.setActivity("I m online");
+  client.user.setActivity("RainbowBot is Ready !");
 });
 
 client.on("ready", () => {
@@ -35,7 +35,7 @@ client.on("ready", () => {
         role.edit({ color: "RANDOM" });
       }
     });
-  }, 6000); //the rainbow time
+  }, 7000); //the rainbow time
 });
 
 client.login(process.env.TOKEN);
