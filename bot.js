@@ -1,112 +1,41 @@
-const Discord = require('discord.js')
-const client = new Discord.Client()
-const prefix = '!'
-//information about the bot
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[═════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations About Rainbow bot:')
-  console.log('')
-  console.log(`Servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`Channels! [ " ${client.channels.size} " ]`);
-  console.log(`Arch! [ " ${process.arch} " ]`);
-  console.log(`Platform! [ " ${process.platform} " ]`);
-  console.log(`Node Version! [ " ${process.version}" ]`);
-  console.log(`Prefix! [ " ${prefix}" ]`);
-  console.log(`Language! [ " NodeJS " ]`);
-  console.log(`Ram Usage! [ " ${(process.memoryUsage().rss / 1048576).toFixed()}MB " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log(`${client.user.username} Is Online`)
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log('Created by 아유 | Aka ＡＹＵＳＨ#1999')
-  console.log('╚[════════════]╝')
-	client.user.setActivity('🌈 Rainbow Hell | prefix !', {type: "playing"})
- 
-console.log('Done The Watching Setup Completed')
-	
+const http = require("http");
+const express = require("express");
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
 });
-//Best Rainbow Bot .
-client.on('message', message => {//new msg event
-if(!message.channel.guild) return;
-  if(message.content.startsWith(prefix + 'setup')) {//to create the rainbow role
-	  let role = message.guild.roles.find('name', 'Rainbowrole')
-    if(role) return message.channel.send(`This Setup is Already Completed !`)//if the role already created return with this msg
-  //start of create role 
-  if(!role){
-   rainbow = message.guild.createRole({
-   name: "Rainbowrole",//the role will create name
-   color: "#000000",//the default color
-   permissions:[]//the permissions
- //end of create role
- 
-})
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
 
+const Discord = require("discord.js");
+const fs = require("fs");
+const ms = require("ms");
+const ytdl = require("ytdl-core");
+const YouTube = require("simple-youtube-api");
+const PREFIX = "r!";
+const snekfetch = require("snekfetch");
+const talkedRecently = new Set();
+const queue = new Map();
+const client = new Discord.Client();
 
-}
-message.channel.send('The Rainbow Role Has Successfully Set Up')//if the step completed
-}})
-
-client.on('ready', () => {//new ready event
-  setInterval(function(){
-      client.guilds.forEach(g => { 
-                  var role = g.roles.find('name', 'Rainbowrole');//rainbow role name
-                  if (role) {
-                      role.edit({color : "RANDOM"});
-                  };
-      });
-  }, 15000);//the rainbow time
-
-})
-
-
-client.on("message", message => {//new msg event
-  if (message.content === "!help") {//the help cmd
-      message.reply('See your DM! 📫')
-        let rainembed = new Discord.RichEmbed()//new embed
-        //the embed description (help msg)
-        .setColor('#f44242')
-        .setFooter('Made With ❤️ By Captain X')
-        .setDescription(`
-!setup
-- To create the Rainbow Role & Start The Rainbow
-!invite 
-- To Invite The Bot
-The steps of the role did not worked
-1- Set the bot role on top 
-2- Kick and reinvite the bot
-3- If you havee a question or an issue with my bot
-1- Contact me - Captain X
-2- Join official server [click here](https://discord.gg/EY8XARS)
-`)
-
-message.author.sendEmbed(rainembed)//send the embed to the author dm
-    }})
-   client.on('message', message => {//new cmd
-	   if(message.content.startsWith(`!invite`)) { //the invite bot cmd
-		   if(!message.channel.guild) return;
-           message.reply('you got invite link in dm DM! 📫')
-		   var embed = new Discord.RichEmbed()
-		   .setTitle(">> ClickHere To Invite" + `${client.user.username}` + " <<")
-		   .setURL("https://discordapp.com/oauth2/authorize?client_id=" + `${client.user.id}` + "&scope=bot&permissions=2080374975")
-		   .setTimestamp()
-		   .setFooter(`Requested By | ${message.author.username}`)
-           .setColor("RANDOM")
-      
-		   message.author.send({embed})//send the url in the author dm
-	   }
+client.once("ready", () => {
+  console.log("Ready!");
+  client.user.setActivity("I m online");
 });
 
-client.login(process.env.token)
+client.on("ready", () => {
+  //new ready event
+  setInterval(function() {
+    client.guilds.forEach(g => {
+      var role = g.roles.find("name", "Rainbow"); //rainbow role name
+      if (role) {
+        role.edit({ color: "RANDOM" });
+      }
+    });
+  }, 3000); //the rainbow time
+});
+
+client.login(process.env.TOKEN);
