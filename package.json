@@ -1,16 +1,30 @@
 {
-  "name": "rainbow",
-  "version": "1.0.0",
-  "description": "",
+  "name": "color-bots-2",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express, instantly up and running.",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bot.js"
   },
-  "author": "yamil",
-  "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2",
-    "ms": "^2.1.1",
-    "randomcolor": "^0.5.4"
-  }
+    "express": "^4.16.4",
+    "discord.js": "^11.5.1",
+    "ytdl-core": "^1.0.0",
+    "simple-youtube-api": "^5.2.1",
+    "fs": "^0.0.2",
+    "sketch": "^0.2.0",
+    "ms": "^2.1.2"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
