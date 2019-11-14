@@ -35,7 +35,7 @@ client.on("ready", () => {
         role.edit({ color: "RANDOM" });
       }
     });
-  }, 3000); //the rainbow time
+  }, 4000); //the rainbow time
 });
 
 client.login(process.env.TOKEN);
