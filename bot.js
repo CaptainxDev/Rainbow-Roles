@@ -15,7 +15,7 @@ const fs = require("fs");
 const ms = require("ms");
 const ytdl = require("ytdl-core");
 const YouTube = require("simple-youtube-api");
-const PREFIX = "r!";
+const PREFIX = "!";
 const snekfetch = require("snekfetch");
 const talkedRecently = new Set();
 const queue = new Map();
@@ -30,12 +30,12 @@ client.on("ready", () => {
   //new ready event
   setInterval(function() {
     client.guilds.forEach(g => {
-      var role = g.roles.find("name", "Rainbow"); //rainbow role name
+      var role = g.roles.find("name", "discoR"); //rainbow role name
       if (role) {
         role.edit({ color: "RANDOM" });
       }
     });
-  }, 1000); //the rainbow time
+  }, 4000); //the rainbow time
 });
 
 client.login(process.env.TOKEN);
