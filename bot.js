@@ -30,12 +30,12 @@ client.on("ready", () => {
   //new ready event
   setInterval(function() {
     client.guilds.forEach(g => {
-      var role = g.roles.find("name", "discoR"); //rainbow role name
+      var role = g.roles.find("name", "Rainbow"); //rainbow role name
       if (role) {
         role.edit({ color: "RANDOM" });
       }
     });
-  }, 1000); //the rainbow time
+  }, 10000); //the rainbow time
 });
 
 client.login(process.env.TOKEN);
