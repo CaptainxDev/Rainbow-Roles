@@ -1,25 +1,8 @@
 const Discord = require("discord.js");
-const forEachTimeout = require("foreach-timeout");
 const client = new Discord.Client();
 const colors = ["RANDOM"];
 const stop = [];
-async function color() {
-  forEachTimeout(
-    colors,
-    color => {
-      client.guilds.forEach(guild => {
-        if (!stop.includes(guild.id)) {
-          let role = guild.roles.find("name", "Rainbow");
-          if (role && role.editable) role.setColor(color);
-        }
-      });
-    },
-    10000
-  ).then(color);
-}
-client.on("ready", () => {
-  color();
-});
+
 client.on("guildCreate", guild => {
   let channels = guild.channels.filter(
     channel =>
@@ -55,7 +38,7 @@ client.on("message", message => {
 });
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
-  client.user.setStatus("dnd");
+  client.user.setStatus("online");
 });
 
 //Best Rainbow Bot .
@@ -89,10 +72,19 @@ client.on("message", message => {
           "The Rainbow Role Has Successfully Set Up"
       }
     }); //if the step completed
-  }
+    
+client.on("ready", () => {
+  //new ready event
+  setInterval(function() {
+    client.guilds.forEach(g => {
+      var role = g.roles.find("name", "Rainbow"); //rainbow role name
+      if (role) {
+        role.edit({ color: "RANDOM" });
+      }
+    });
+  }, 5000); //the rainbow time
 });
 
-
-
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN); 
+  
   
