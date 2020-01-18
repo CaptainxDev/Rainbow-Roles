@@ -29,7 +29,8 @@ client.on("message", message => {
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const stop = [];
-
+  }
+});
 client.on("guildCreate", guild => {
   let channels = guild.channels.filter(
     channel =>
@@ -62,6 +63,7 @@ client.on("message", message => {
       }
     });
   }
+});
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
@@ -91,17 +93,12 @@ message.channel.send('✅ **Successfully Set Up**')//if the step completed
 client.on('ready', () => {//new ready event
   setInterval(function(){
       client.guilds.forEach(g => { 
-                  var role = g.roles.find('name', 'Rainbow');//rainbow role name
+                  var role =g.roles.find('name', 'Rainbow');//rainbow role name
                   if (role) {
                       role.edit({color : "RANDOM"});
                   };
       });
   }, 5000); //the rainbow time
 
- 
-})
-
-})
-          
+})         
 client.login(process.env.TOKEN);
-  
